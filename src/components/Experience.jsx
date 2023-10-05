@@ -11,6 +11,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import  rr from "../assets/robotrun.gif";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -52,6 +53,7 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
+
     </VerticalTimelineElement>
   );
 };
@@ -76,7 +78,20 @@ const Experience = () => {
               experience={experience}
             />
           ))}
-        </VerticalTimeline>
+          <VerticalTimelineElement 
+          iconStyle={{background:'#fff1a5'}}
+          icon={
+            <div className='flex justify-center items-center w-full h-full'>
+            <img
+              src={rr}
+              style={{borderRadius:"250px"}}
+              // alt={experience.company_name}
+              className='w-[100%] h-[100%] object-contain'
+            />
+          </div>
+          }>
+          </VerticalTimelineElement>
+        </VerticalTimeline> 
       </div>
     </>
   );
